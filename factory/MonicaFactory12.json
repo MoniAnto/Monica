@@ -1,0 +1,9 @@
+{
+	"name": "MonicaFactory12",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "777ff6f8-63f6-4ee3-b8d5-b3fee6b07166",
+		"tenantId": "2d2199a8-cb98-4269-b2ae-c63cf2b7c7f0"
+	}
+}
