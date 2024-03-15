@@ -57,7 +57,8 @@
 								"source": {
 									"name": ""
 								}
-							}
+							},
+							null
 						],
 						"typeConversion": true,
 						"typeConversionSettings": {
