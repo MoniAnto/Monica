@@ -55,10 +55,184 @@
 						"mappings": [
 							{
 								"source": {
-									"name": ""
+									"name": "Uniq_Id",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Uniq_Id",
+									"type": "String",
+									"physicalType": "UTF8"
 								}
 							},
-							null
+							{
+								"source": {
+									"name": "Main_Category",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Main_Category",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Main_Category_And_Sub_Category",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Main_Category_And_Sub_Category",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Selling_Price",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Selling_Price",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Quantity",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Quantity",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "About_Product",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "About_Product",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Product_Specification",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Product_Specification",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Technical_Details",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Technical_Details",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Shipping_Weight",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Shipping_Weight",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Product_Dimensions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Product_Dimensions",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Image",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Image",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Variants",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Variants",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Sku",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Sku",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Product_Url",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Product_Url",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_Amazon_Seller",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Is_Amazon_Seller",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							}
 						],
 						"typeConversion": true,
 						"typeConversionSettings": {
