@@ -62,7 +62,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "source22",
+						"referenceName": "monicasinkdataset",
 						"type": "DatasetReference"
 					}
 				],
