@@ -13,7 +13,7 @@
 				"folderPath": "monica_dictionary/Raw_file",
 				"fileSystem": "uc-metastore-eastus2"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": "|",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
