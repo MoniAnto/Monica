@@ -1,0 +1,23 @@
+{
+	"name": "monidatset2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "monicaHttpServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "MoniAnto/Monica/main/Ecommerce%20market%20data%20Product%20Details.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
