@@ -1,0 +1,22 @@
+{
+	"name": "http_git_raw1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "httplinkedservices1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "MoniAnto/Monica/main/Ecommerce%20market%20data%20Id%20and%20Product%20Name.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
