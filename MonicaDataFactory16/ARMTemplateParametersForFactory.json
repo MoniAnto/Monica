@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "MonicaDataFactory16"
+		},
+		"AzureDataLakeStoragelinkedser_accountKey": {
+			"value": ""
+		},
+		"HttplinkedServer2_password": {
+			"value": ""
+		},
+		"httplinkedservices1_password": {
+			"value": ""
+		},
+		"AzureDataLakeStoragelinkedser_properties_typeProperties_url": {
+			"value": "https://storageunitycatalogus2.dfs.core.windows.net/"
+		},
+		"HttplinkedServer2_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
+		},
+		"HttplinkedServer2_properties_typeProperties_userName": {
+			"value": "MoniAnto"
+		},
+		"httplinkedservices1_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
+		},
+		"httplinkedservices1_properties_typeProperties_userName": {
+			"value": "MoniAnto"
+		},
+		"endpointAzureDataLakeStorage_properties_privateLinkResourceId": {
+			"value": "/subscriptions/8d70b7b4-d2e4-4262-bb0f-0b4608c1a795/resourceGroups/rg-unitycatalog-eastus2/providers/Microsoft.Storage/storageAccounts/storageunitycatalogus2"
+		},
+		"endpointAzureDataLakeStorage_properties_groupId": {
+			"value": "dfs"
+		},
+		"endpointAzureDataLakeStorage_properties_fqdns": {
+			"value": [
+				"storageunitycatalogus2.dfs.core.windows.net"
+			]
+		},
+		"monicaAzureDataLakeStorage168_properties_privateLinkResourceId": {
+			"value": "/subscriptions/8d70b7b4-d2e4-4262-bb0f-0b4608c1a795/resourceGroups/rg-unitycatalog-eastus2/providers/Microsoft.Storage/storageAccounts/storageunitycatalogus2"
+		},
+		"monicaAzureDataLakeStorage168_properties_groupId": {
+			"value": "dfs"
+		},
+		"monicaAzureDataLakeStorage168_properties_fqdns": {
+			"value": [
+				"storageunitycatalogus2.dfs.core.windows.net"
+			]
+		},
+		"monicaendpoint_properties_privateLinkResourceId": {
+			"value": "/subscriptions/8d70b7b4-d2e4-4262-bb0f-0b4608c1a795/resourceGroups/rg-unitycatalog-eastus2/providers/Microsoft.Storage/storageAccounts/storageunitycatalogus2"
+		},
+		"monicaendpoint_properties_groupId": {
+			"value": "dfs"
+		},
+		"monicaendpoint_properties_fqdns": {
+			"value": [
+				"storageunitycatalogus2.dfs.core.windows.net"
+			]
+		}
+	}
+}

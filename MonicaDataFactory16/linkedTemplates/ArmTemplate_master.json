@@ -1,0 +1,167 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "MonicaDataFactory16"
+		},
+		"AzureDataLakeStoragelinkedser_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStoragelinkedser'"
+		},
+		"HttplinkedServer2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'HttplinkedServer2'"
+		},
+		"httplinkedservices1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'httplinkedservices1'"
+		},
+		"AzureDataLakeStoragelinkedser_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storageunitycatalogus2.dfs.core.windows.net/"
+		},
+		"HttplinkedServer2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com"
+		},
+		"HttplinkedServer2_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "MoniAnto"
+		},
+		"httplinkedservices1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com"
+		},
+		"httplinkedservices1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "MoniAnto"
+		},
+		"endpointAzureDataLakeStorage_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/8d70b7b4-d2e4-4262-bb0f-0b4608c1a795/resourceGroups/rg-unitycatalog-eastus2/providers/Microsoft.Storage/storageAccounts/storageunitycatalogus2"
+		},
+		"endpointAzureDataLakeStorage_properties_groupId": {
+			"type": "string",
+			"defaultValue": "dfs"
+		},
+		"endpointAzureDataLakeStorage_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"storageunitycatalogus2.dfs.core.windows.net"
+			]
+		},
+		"monicaAzureDataLakeStorage168_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/8d70b7b4-d2e4-4262-bb0f-0b4608c1a795/resourceGroups/rg-unitycatalog-eastus2/providers/Microsoft.Storage/storageAccounts/storageunitycatalogus2"
+		},
+		"monicaAzureDataLakeStorage168_properties_groupId": {
+			"type": "string",
+			"defaultValue": "dfs"
+		},
+		"monicaAzureDataLakeStorage168_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"storageunitycatalogus2.dfs.core.windows.net"
+			]
+		},
+		"monicaendpoint_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/8d70b7b4-d2e4-4262-bb0f-0b4608c1a795/resourceGroups/rg-unitycatalog-eastus2/providers/Microsoft.Storage/storageAccounts/storageunitycatalogus2"
+		},
+		"monicaendpoint_properties_groupId": {
+			"type": "string",
+			"defaultValue": "dfs"
+		},
+		"monicaendpoint_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"storageunitycatalogus2.dfs.core.windows.net"
+			]
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "MonicaDataFactory16_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStoragelinkedser_accountKey": {
+						"value": "[parameters('AzureDataLakeStoragelinkedser_accountKey')]"
+					},
+					"HttplinkedServer2_password": {
+						"value": "[parameters('HttplinkedServer2_password')]"
+					},
+					"httplinkedservices1_password": {
+						"value": "[parameters('httplinkedservices1_password')]"
+					},
+					"endpointAzureDataLakeStorage_properties_privateLinkResourceId": {
+						"value": "[parameters('endpointAzureDataLakeStorage_properties_privateLinkResourceId')]"
+					},
+					"endpointAzureDataLakeStorage_properties_groupId": {
+						"value": "[parameters('endpointAzureDataLakeStorage_properties_groupId')]"
+					},
+					"endpointAzureDataLakeStorage_properties_fqdns": {
+						"value": "[parameters('endpointAzureDataLakeStorage_properties_fqdns')]"
+					},
+					"monicaAzureDataLakeStorage168_properties_privateLinkResourceId": {
+						"value": "[parameters('monicaAzureDataLakeStorage168_properties_privateLinkResourceId')]"
+					},
+					"monicaAzureDataLakeStorage168_properties_groupId": {
+						"value": "[parameters('monicaAzureDataLakeStorage168_properties_groupId')]"
+					},
+					"monicaAzureDataLakeStorage168_properties_fqdns": {
+						"value": "[parameters('monicaAzureDataLakeStorage168_properties_fqdns')]"
+					},
+					"monicaendpoint_properties_privateLinkResourceId": {
+						"value": "[parameters('monicaendpoint_properties_privateLinkResourceId')]"
+					},
+					"monicaendpoint_properties_groupId": {
+						"value": "[parameters('monicaendpoint_properties_groupId')]"
+					},
+					"monicaendpoint_properties_fqdns": {
+						"value": "[parameters('monicaendpoint_properties_fqdns')]"
+					},
+					"AzureDataLakeStoragelinkedser_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStoragelinkedser_properties_typeProperties_url')]"
+					},
+					"HttplinkedServer2_properties_typeProperties_url": {
+						"value": "[parameters('HttplinkedServer2_properties_typeProperties_url')]"
+					},
+					"HttplinkedServer2_properties_typeProperties_userName": {
+						"value": "[parameters('HttplinkedServer2_properties_typeProperties_userName')]"
+					},
+					"httplinkedservices1_properties_typeProperties_url": {
+						"value": "[parameters('httplinkedservices1_properties_typeProperties_url')]"
+					},
+					"httplinkedservices1_properties_typeProperties_userName": {
+						"value": "[parameters('httplinkedservices1_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
