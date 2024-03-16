@@ -54,7 +54,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "git_raw_sink",
+						"referenceName": "adls_sink",
 						"type": "DatasetReference"
 					}
 				]
@@ -111,7 +111,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "git_raw_sink",
+						"referenceName": "adls_sink",
 						"type": "DatasetReference"
 					}
 				]
