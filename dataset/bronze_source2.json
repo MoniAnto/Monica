@@ -1,0 +1,85 @@
+{
+	"name": "bronze_source2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStoragelinkedser",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Ecommerce market data Product Details.csv",
+				"folderPath": "monica_dictionary/Raw/MoniAnto/Monica/main",
+				"fileSystem": "uc-metastore-eastus2"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Uniq Id",
+				"type": "String"
+			},
+			{
+				"name": "Main Category",
+				"type": "String"
+			},
+			{
+				"name": "Main_Category_And_Sub_Category",
+				"type": "String"
+			},
+			{
+				"name": "Selling Price",
+				"type": "String"
+			},
+			{
+				"name": "Quantity",
+				"type": "String"
+			},
+			{
+				"name": "About Product",
+				"type": "String"
+			},
+			{
+				"name": "Product Specification",
+				"type": "String"
+			},
+			{
+				"name": "Technical Details",
+				"type": "String"
+			},
+			{
+				"name": "Shipping Weight",
+				"type": "String"
+			},
+			{
+				"name": "Product Dimensions",
+				"type": "String"
+			},
+			{
+				"name": "Image",
+				"type": "String"
+			},
+			{
+				"name": "Variants",
+				"type": "String"
+			},
+			{
+				"name": "Sku",
+				"type": "String"
+			},
+			{
+				"name": "Product Url",
+				"type": "String"
+			},
+			{
+				"name": "Is Amazon Seller",
+				"type": "String"
+			}
+		]
+	}
+}

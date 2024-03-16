@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data2",
+				"name": "file1 copying",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -20,7 +20,6 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "monica_dictionary/Raw_file/MoniAnto/Monica/main",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -46,13 +45,37 @@
 						},
 						"logLocationSettings": {
 							"linkedServiceName": {
-								"referenceName": "AzureDataLakeStorage1",
+								"referenceName": "AzureDataLakeStoragelinkedser",
 								"type": "LinkedServiceReference"
 							}
 						}
 					},
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Uniq Id",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Uniq_Id",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Product Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Product_Name",
+									"physicalType": "UTF8"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -62,13 +85,262 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "monicasinkdataset",
+						"referenceName": "bronze_source1",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "br_dataset",
+						"referenceName": "Parquet_br1",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "file1 copying",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"logSettings": {
+						"enableCopyActivityLog": true,
+						"copyActivityLogSettings": {
+							"logLevel": "Warning",
+							"enableReliableLogging": false
+						},
+						"logLocationSettings": {
+							"linkedServiceName": {
+								"referenceName": "AzureDataLakeStoragelinkedser",
+								"type": "LinkedServiceReference"
+							}
+						}
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Uniq Id",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Uniq_Id",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Main Category",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Main_Category",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Main_Category_And_Sub_Category",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Main_Category_And_Sub_Category",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Selling Price",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Selling_Price",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Quantity",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Quantity",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "About Product",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "About_Product",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Product Specification",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Product_Specification",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Technical Details",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Technical_Details",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Shipping Weight",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Shipping_Weight",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Product Dimensions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Product_Dimensions",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Image",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Image",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Variants",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Variants",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Sku",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Sku",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Product Url",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Product_Url",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Is Amazon Seller",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Is_Amazon_Seller",
+									"physicalType": "UTF8"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "bronze_source2",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Parquet_br1",
 						"type": "DatasetReference"
 					}
 				]

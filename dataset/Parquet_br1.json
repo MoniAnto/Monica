@@ -1,0 +1,20 @@
+{
+	"name": "Parquet_br1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStoragelinkedser",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "monica_dictionary/Bronze_file",
+				"fileSystem": "uc-metastore-eastus2"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
